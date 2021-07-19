@@ -1,0 +1,53 @@
+{
+    "products": [
+        {
+            "name": "Kitchen",
+            "description": "a 4 burner gas stove",
+            "price": 276.00,
+            "qty": 7,
+            "img": "https://www.cnet.com/a/img/RKVmqIlXFl7eKJWALHvIrsCf27c=/1200x630/2019/02/21/4a620639-6f92-4638-93b9-09def1b80076/img-2407.jpg"
+        },
+        {
+            "name": "Blender",
+            "description": "6 speed turbo blender",
+            "price": 60.00,
+            "qty": 7,
+            "img": "https://laopinion.com/wp-content/uploads/sites/3/2020/11/91LYpEZ7t8L._AC_SL1500_.jpg?quality=80&strip=all&w=1200"
+        },
+        {
+            "name": "Microwave",
+            "description": "Microwave with high defrosting capacity",
+            "price": 120.00,
+            "qty": 7,
+            "img": "https://i.pcmag.com/imagery/reviews/07kR6EhLeerHvZrtArRIwUv-4..1569481662.jpg"
+        },
+        {
+            "name": "50 inch smart tv",
+            "description": "5 hdmi ports, high resolution 4k",
+            "price": 670.00,
+            "qty": 7,
+            "img": "https://m.media-amazon.com/images/I/81RMDc4CWYL._AC_SL1500_.jpg"
+        },
+        {
+            "name": "Laptop lenovo legion",
+            "description": "16 GB RAM, 1 TB SSD, WINDOWS 11",
+            "price": 1200.00,
+            "qty": 7,
+            "img": "https://www.lenovo.com/medias/lenovo-legion-y540-15-rtx-gtx.jpg?context=bWFzdGVyfHJvb3R8NTY3NDB8aW1hZ2UvanBlZ3xoZTEvaDEyLzEwODE0ODEyMjkxMTAyLmpwZ3wyYzlhMGEzOGM5MzZjNDVlY2NjM2E5M2ZmOGIzZDhiYWI4MmNiZjhkNDdmNjAxYzE2NThhNDg2ZDM4YzRjNjU3"
+        },
+        {
+            "name": "Iphone X",
+            "description": "64 GB, 1200mhz",
+            "price": 276.00,
+            "qty": 7,
+            "img": "https://i.blogs.es/e5cf54/iphone-x/1366_2000.jpg"
+        },
+        {
+            "name": "Air conditioner 5000btu",
+            "description": "5000 btu capacity",
+            "price": 430.00,
+            "qty": 7,
+            "img": "https://i.ebayimg.com/images/g/FZ4AAOSwDRdf2859/s-l300.jpg"
+        }
+    ]
+}
