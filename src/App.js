@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "pages/home";
-import ProductsState from "context/products/productsState";
+import ProductsState from "context/productsState";
 import Shopping from "pages/shopping";
 import Cart from "pages/cart";
 

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Dialog } from 'primereact/dialog';
 import { Container, ImageProduct, Title} from 'styled-components/purchase/purchase.style';
-import ProductContext from 'context/products/productsContext';
+import ProductContext from 'context/productsContext';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 

@@ -3,7 +3,7 @@ import { Dialog } from 'primereact/dialog';
 import { Container, Title, Img, ContentButton } from 'styled-components/purchase/purchase.style';
 import confirm from 'media/areyousure.svg'
 import { ButtonPr } from 'styled-components/list/list.styles';
-import ProductContext from 'context/products/productsContext';
+import ProductContext from 'context/productsContext';
 import { useHistory } from 'react-router-dom';
 
 const ConfirmPurchase = ({ visible, onHide }) => {

@@ -1,4 +1,4 @@
-import ProductContext from 'context/products/productsContext'
+import ProductContext from 'context/productsContext'
 import React, { useContext, useEffect } from 'react'
 import { ButtonPr, CardPr, Container, Img } from 'styled-components/list/list.styles'
 

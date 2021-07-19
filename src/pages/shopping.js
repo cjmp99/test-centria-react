@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { Container } from 'styled-components/list/list.styles'
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import ProductContext from 'context/products/productsContext';
+import ProductContext from 'context/productsContext';
 import { Tag } from 'primereact/tag';
 import ShowShipment from 'components/modal/ShowShipment';
 import useShowModal from 'hooks/useShowModal';

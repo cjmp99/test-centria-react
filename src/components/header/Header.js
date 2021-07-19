@@ -3,7 +3,7 @@ import { Container, ContainerSidebar, Hamburguer, LinkH, LinksHeader, Logo, Nav,
 import { Sidebar } from 'primereact/sidebar';
 import useShowSidebar from 'hooks/useShowSidebar';
 import { useHistory } from 'react-router-dom';
-import ProductContext from 'context/products/productsContext';
+import ProductContext from 'context/productsContext';
 
 const Header = () => {
     const [visible, showSidebar] = useShowSidebar()

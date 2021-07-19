@@ -1,6 +1,6 @@
 import Layout from 'components/layout/Layout'
 import ConfirmPurchase from 'components/modal/ConfirmPurchase';
-import ProductContext from 'context/products/productsContext';
+import ProductContext from 'context/productsContext';
 import useShowModal from 'hooks/useShowModal';
 import React, { useContext } from 'react'
 import { Container, ContentInfo, ContentProducts, Label, NonData, Product, RemoveButton, Title } from 'styled-components/cart/cart.styles'
