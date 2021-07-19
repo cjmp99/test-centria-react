@@ -1,4 +1,4 @@
-import { ADD_PRODUCT_TO_CART, COMPLETE_PURCHASE, GET_ALL_PRODUCT, REMOVE_PRODUCT, SELECT_SHIPMENT } from "./products/productsTypes";
+import { ADD_PRODUCT_TO_CART, COMPLETE_PURCHASE, GET_ALL_PRODUCT, REMOVE_PRODUCT, SELECT_SHIPMENT } from "./productsTypes";
 
 const initialState = {
     products: [],
