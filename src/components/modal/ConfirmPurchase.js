@@ -6,15 +6,17 @@ import { ButtonPr } from 'styled-components/list/list.styles';
 import ProductContext from 'context/productsContext';
 import { useHistory } from 'react-router-dom';
 
-const ConfirmPurchase = ({ visible, onHide }) => {
+const ConfirmPurchase = ({ visible, onHide, accept }) => {
     const { cart, completePurchase } = useContext(ProductContext);
     const [disabled, setDisable] = useState(false);
     const [loading, setLoading] = useState(false);
     const history = useHistory()
+    
 
     const sendPurChase = () => {
         setLoading(true)
         setDisable(true)
+        accept()
 
         setTimeout(() => {
             completePurchase(cart)
@@ -50,6 +52,7 @@ const ConfirmPurchase = ({ visible, onHide }) => {
                 </ContentButton>
             }
         >
+
             <Container>
 
                 <Img src={confirm} />

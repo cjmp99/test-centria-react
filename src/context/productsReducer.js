@@ -21,7 +21,7 @@ export function ProductsReducer(state = initialState, action) {
         case ADD_PRODUCT_TO_CART:
             return {
                 ...state,
-                cart: [...state.cart, action.payload],
+                cart: [action.payload, ...state.cart],
                 pricetotal: state.cart.reduce(
                     (sum, value) => parseFloat(sum) + parseFloat(value.price),
                     action.payload.price
@@ -34,6 +34,7 @@ export function ProductsReducer(state = initialState, action) {
                 ...state,
                 cart: state.cart.filter((item) => item !== action.payload),
                 pricetotal: state.pricetotal - action.payload.price,
+                products: action.products
             }
 
         case COMPLETE_PURCHASE:

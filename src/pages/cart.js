@@ -2,17 +2,24 @@ import Layout from 'components/layout/Layout'
 import ConfirmPurchase from 'components/modal/ConfirmPurchase';
 import ProductContext from 'context/productsContext';
 import useShowModal from 'hooks/useShowModal';
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { Container, ContentInfo, ContentProducts, Label, NonData, Product, RemoveButton, Title } from 'styled-components/cart/cart.styles'
+import { Toast } from 'primereact/toast';
 import { ButtonPr } from 'styled-components/list/list.styles';
 
 const Cart = () => {
     const [visible, onHide] = useShowModal()
     const { cart, pricetotal, removeProduct } = useContext(ProductContext);
+    const toast = useRef(null);
 
+    const accept = () => {
+        toast.current.show({ severity: 'success', summary: 'Confirmed', detail: 'You have accepted', life: 5000 });
+    }
 
     return (
         <Layout>
+            <Toast ref={toast} />
+
             <Title>Cart</Title>
 
             <Container>
@@ -60,6 +67,7 @@ const Cart = () => {
             <ConfirmPurchase
                 visible={visible}
                 onHide={onHide}
+                accept={accept}
             />
         </Layout>
     )

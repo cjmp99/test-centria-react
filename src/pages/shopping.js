@@ -19,6 +19,7 @@ const Shopping = () => {
 
     return (
         <Layout>
+
             <Container>
                 <h1>My shopping</h1>
 
@@ -40,7 +41,7 @@ const Shopping = () => {
                     } />
                     <Column field="showproducts" header="Shipment" body={
                         rowData => (
-                            <span style={{position: 'relative', left: '30px'}} onClick={() => showShipment(rowData)}>
+                            <span style={{ position: 'relative', left: '30px' }} onClick={() => showShipment(rowData)}>
                                 <i className="pi pi-eye"></i>
                             </span>
                         )

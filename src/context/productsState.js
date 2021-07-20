@@ -33,7 +33,7 @@ const ProductsState = props => {
             dispatch({
                 type: GET_ALL_PRODUCT,
                 products: productsLocal ? productsLocal : response.data.products,
-                cart: currentCart ? currentCart : []
+                cart: state.cart ? state.cart : []
             })
         } catch (error) {
             console.log(error);
@@ -46,7 +46,8 @@ const ProductsState = props => {
         const data = { // add id unique for product
             ...product,
             qty: product.qty - 1,
-            id: id
+            id: id,
+            key: key
         }
 
         state.products[key] = data // replace element of array
@@ -65,21 +66,23 @@ const ProductsState = props => {
         //set values for storage local
         localStorage.setItem('products', JSON.stringify(state.products))
         localStorage.setItem('pricetotal', totalprice)
-        localStorage.setItem('cart', JSON.stringify([...state.cart, data]))
+        localStorage.setItem('cart', JSON.stringify([data, ...state.cart]))
     }
 
-    const removeProduct = (product, key) => {
+    const removeProduct = (product) => {
         const data = {
             ...product,
             qty: product.qty + 1
         }
-        state.products[key] = data // replace element of array
+
+        state.products[product.key] = data // replace element of array
 
         const removePrice = state.pricetotal - product.price
         const removeProduct = state.cart.filter((item) => item !== product)
         dispatch({
             type: REMOVE_PRODUCT,
             payload: product,
+            products: state.products
         })
 
         localStorage.setItem('products', JSON.stringify(state.products))
@@ -99,7 +102,7 @@ const ProductsState = props => {
             payload: updatePurchase
         })
 
-        localStorage.removeItem('cart')
+        localStorage.setItem('cart', JSON.stringify([]))
         localStorage.removeItem('pricetotal')
         localStorage.setItem('myshopping', JSON.stringify([updatePurchase, ...state.myshopping]))
     }
